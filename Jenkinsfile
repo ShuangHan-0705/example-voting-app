@@ -33,18 +33,18 @@ pipeline {
     stage('Build Result Image') {
       steps {
         sh 'printenv'
-        sh 'docker build -t nzleoliang/result ./result'
+        sh 'docker build -t hannah0705/result ./result'
         echo 'Build result completed'
       }
     } 
     stage('Build Vote Image') {
       steps {
-        sh 'docker build -t nzleoliang/vote ./vote'
+        sh 'docker build -t hannah0705/vote ./vote'
       }
     }
     stage('Build Worker Image') {
       steps {
-        sh 'docker build -t nzleoliang/worker ./worker'
+        sh 'docker build -t hannah0705/worker ./worker'
       }
     }
     stage('E2E Testing') {
